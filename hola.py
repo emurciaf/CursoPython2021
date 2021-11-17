@@ -4,4 +4,6 @@
 
 nombre = "Edu"
 print("Hola", nombre)
+for i in numbers:
+    print(i)
 
