@@ -1,3 +1,5 @@
+import datetime
+
 class FestivalMusical:
     def __init__(self, nombre, pais, estilo_musical):
         self.nombre = nombre
@@ -6,18 +8,14 @@ class FestivalMusical:
     def festival_metodo(self):
         print('El mejor festival es:')
 
+    @classmethod
+    def valor_ticket( cls, valor):
+        cls.valor_ticket = valor
 
-festival1 = FestivalMusical('Creamfileds', 'UK', 'Dance')
-festival2 = FestivalMusical('Primavera Sound', 'SP', 'Dance')
-
-print( festival1.nombre, festival1.pais, festival1.estilo_musical)
-print( festival2.nombre, festival2.pais, festival2.estilo_musical)
-
-festival2.festival_metodo()
-print(festival2.nombre.upper())
-
-festival1.nombre = 'Benicassim'
-print( festival1.nombre)
-
-del festival1
-print( festival1.nombre)
+    @staticmethod
+    def dia_evento(dia):
+        #if dia.weekday() >= 5:
+        if dia.weekday() == 5 or dia.weekday() == 6:
+            return print('Es un fin de semana')
+        else:
+            return print('Es un día laborable')
